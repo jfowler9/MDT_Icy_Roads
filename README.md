@@ -1,5 +1,6 @@
 # MDT_Icy_Roads
 This repository is for the MDT Icy Roads project; https://www.mdt.mt.gov/research/projects/safety/icy-road-rwis.shtml
+Scripts are to analyze Resonon hyperspectral cameras.
 
 #MSU sub-zero lab analysis
 
@@ -22,4 +23,6 @@ Resonon camera software outputs .bip or .bil file. Next task is to either write 
 https://stackoverflow.com/questions/23816545/reading-zipped-esri-bil-files-with-python
 
 Goal: remove arcGIS from workflow and choose NIR and Red wavelengths to optimize results.
+
+#KMSO image analysis (January - Feburary 2021)
 
