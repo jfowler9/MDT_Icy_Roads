@@ -17,18 +17,20 @@ for filename in all_files:
     #read tiff file. File is NDVI ratio from bands selected in ArcGIS
     #imh = Image.open('filename') 
     imh = Image.open(os.path.join(path, filename))
-   #convert from image object to numpy array.
+   #convert from image object to numpy array. Look through this arrary to find calibration panel pixel values
     data = asarray(imh)
     
+    #remove pixel values from array that are associated with the calibration panel
     if select == "9_22_20_TIF":
-        FIRST = 725 
-        LAST = 849 
+        FIRST = 725 #row value
+        LAST = 849 #row value
         subset = list(range(FIRST)) + list(range(LAST + 1, len(data)))#make a subset array, + list concatenates, len to get end of array
         new_data = data[subset].copy()
         
-        df = pd.DataFrame(new_data) #made a dataframe to use pandas
-        #df = pd.DataFrame(data) #needed for Pika 320, calibration panel not obvious so get cropped images
+        df = pd.DataFrame(new_data) #make a dataframe to use pandas
     
+        #two asphalt samples are divided in quadrants/sample. Each quadrant NDVI value is averaged. 
+        #A key is availabe to know which quadrants were dry and which were wet, ice, or snow depending on day
         sub1 = df.loc[0:376 , 0:449] #get dataframe subset #9/22 Pika L = 0:376 , 0:449, Pika 320 = 0:116 , 0:159
         array1 = sub1.to_numpy() #make array from dataframe #9/23 Pika L = 0:373 , 0:449, 9/25 Pika L = 0:362 , 0:449
         mean1 = array1.mean() #calculate mean
@@ -80,12 +82,7 @@ for filename in all_files:
         marr = np.array([mean1, mean2, mean3, mean4, mean5, mean6, mean7, mean8])
         earr = np.array([error1, error2, error3, error4, error5, error6, error7, error8])
         
-        #make new folder to hold calculated data
-#        if not os.path.isdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_22_20'):
-#            os.mkdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_22_20')
-        
-        file = os.path.split(filename) #returns a tuple that represents head and tail of the specified path name.
-        
+        file = os.path.split(filename) #returns a tuple that represents head and tail of the specified path name.    
         
         col_Names=[file[1]]
         df_2 = pd.DataFrame(marr, columns=col_Names)
@@ -153,11 +150,7 @@ for filename in all_files:
         
         marr = np.array([mean1, mean2, mean3, mean4, mean5, mean6, mean7, mean8])
         earr = np.array([error1, error2, error3, error4, error5, error6, error7, error8])
-        
-        #make new folder to hold calculated data
-#        if not os.path.isdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_22_20'):
-#            os.mkdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_22_20')
-        
+       
         file = os.path.split(filename) #returns a tuple that represents head and tail of the specified path name.
         
         col_Names=[file[1]]
@@ -224,11 +217,7 @@ for filename in all_files:
         
         marr = np.array([mean1, mean2, mean3, mean4, mean5, mean6, mean7, mean8])
         earr = np.array([error1, error2, error3, error4, error5, error6, error7, error8])
-        
-        #make new folder to hold calculated data
-#        if not os.path.isdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_24_20'):
-#            os.mkdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_24_20')
-#        
+       
         file = os.path.split(filename) #returns a tuple that represents head and tail of the specified path name.
         
         col_Names=[file[1]]
@@ -296,11 +285,7 @@ for filename in all_files:
         
         marr = np.array([mean1, mean2, mean3, mean4, mean5, mean6, mean7, mean8])
         earr = np.array([error1, error2, error3, error4, error5, error6, error7, error8])
-        
-        #make new folder to hold calculated data
-#        if not os.path.isdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_25_20'):
-#            os.mkdir('/Users/jen/Box Sync/AASOMain/Grants/MDT/Icy Roads Project/Sub-Zero Lab Measurements/Python code/TIF_Data/means9_25_20')
-        
+       
         file = os.path.split(filename) #returns a tuple that represents head and tail of the specified path name.
         
         col_Names=[file[1]]
