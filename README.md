@@ -22,8 +22,8 @@ quadrants 1,3,5,7	contain snow/ice/wet
 Resonon camera software outputs .bip or .bil file. 
 - Next task is to either write python plugin to calulate NDVI in script then convert output to tif or try this;
 https://stackoverflow.com/questions/23816545/reading-zipped-esri-bil-files-with-python
-- Next task K-means clustering of data to see if method can discern between black ice and dry asphalt.
--Next task explore Principal Component Analysis(PCA) which is a popular and widely used dimensionality reduction technique for hyperspectral data
+- Upcoming task K-means clustering of data to see if method can discern between black ice and dry asphalt.
+- Upcoming task explore Principal Component Analysis(PCA) which is a popular and widely used dimensionality reduction technique for hyperspectral data
 
 Goal: remove arcGIS from workflow and choose NIR and Red wavelengths to optimize results.
 
