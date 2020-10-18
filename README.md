@@ -2,7 +2,7 @@
 This repository is for the MDT Icy Roads project; https://www.mdt.mt.gov/research/projects/safety/icy-road-rwis.shtml
 Scripts are to analyze Resonon hyperspectral camera outputs.
 
-###MSU sub-zero lab analysis
+### MSU sub-zero lab analysis
 
 Script for this task:
 Ice_Index_Sample_Mean.py
@@ -25,7 +25,7 @@ https://stackoverflow.com/questions/23816545/reading-zipped-esri-bil-files-with-
 - Upcoming task, K-means clustering of data to see if method can discern between black ice and dry asphalt.
 - Upcoming task, explore Principal Component Analysis(PCA) which is a popular and widely used dimensionality reduction technique for hyperspectral data
 
-###KMSO image analysis (January - Feburary 2021)
+### KMSO image analysis (January - Feburary 2021)
 
-###MDT Road image analysis
+### MDT Road image analysis
 
