@@ -9,10 +9,10 @@ Ice_Index_Sample_Mean.py
 
 This script takes TIFF images generated from ArcGIS (images are two asphalt samples with calibration panel, takes 70GB data to 450 MB), makes an arrary of the pixel values, deletes the pixel values associated with the calibration panel, then averages NDVI values by quadrant of each sample.
 
-Sept 22, Pika L camera used on dry samples from 4C - 8C at 2 degree increments
-Sept 23, Pika L camera used on 1/2 dry and 1/2 wet/ice samples from 4C - 8C at 2 degree increments
-Sept 24, Pika 320 camera used on 1/2 dry and 1/2 wet/ice samples from 4C - 8C at 2 degree increments
-Sept. 25, Pika L camera used on 1/2 dry and 1/2 wet/snow samples from 4C - 8C at 2 degree increments
+- Sept 22, Pika L camera used on dry samples from 4C - 8C at 2 degree increments
+- Sept 23, Pika L camera used on 1/2 dry and 1/2 wet/ice samples from 4C - 8C at 2 degree increments
+- Sept 24, Pika 320 camera used on 1/2 dry and 1/2 wet/ice samples from 4C - 8C at 2 degree increments
+- Sept. 25, Pika L camera used on 1/2 dry and 1/2 wet/snow samples from 4C - 8C at 2 degree increments
 
 quadrants 1,3,5,7	contain snow/ice/wet
 
