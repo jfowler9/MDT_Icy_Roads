@@ -20,7 +20,7 @@ quadrants 1,3,5,7	contain snow/ice/wet
  - If ice_index is positive then asphalt is dry, if ice_index is negative then asphalt has ice. Trying to discern between black ice and dry asphalt.
 
 Resonon camera software outputs .bip or .bil file. 
-- Goal: remove arcGIS from workflow and choose NIR and Red wavelengths to optimize results. Next task is to either write python plugin to calulate NDVI in script then convert output to tif or try this;
+- Goal: remove arcGIS from workflow and choose NIR and Red wavelengths to optimize results. Next task is to either write python plugin to calulate ice index in script then convert output to tif or try this;
 https://stackoverflow.com/questions/23816545/reading-zipped-esri-bil-files-with-python
 - Upcoming task, K-means clustering of data to see if method can discern between black ice and dry asphalt.
 - Upcoming task, explore Principal Component Analysis(PCA) which is a popular and widely used dimensionality reduction technique for hyperspectral data
