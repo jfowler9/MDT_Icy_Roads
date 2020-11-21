@@ -25,6 +25,9 @@ https://stackoverflow.com/questions/23816545/reading-zipped-esri-bil-files-with-
 - Upcoming task, K-means clustering of data to see if method can discern between black ice and dry asphalt.
 - Upcoming task, explore Principal Component Analysis(PCA) which is a popular and widely used dimensionality reduction technique for hyperspectral data
 
+Script for plotting:
+Ice_Index_plots.Rmd
+
 ### KMSO image analysis (January - Feburary 2021)
 
 ### MDT Road image analysis
