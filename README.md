@@ -32,3 +32,28 @@ Ice_Index_plots.Rmd
 
 ### MDT Road image analysis
 
+## Feedback
+
+It's a mistake to make this an RMD file. I've changed it to a .R file. I also tried to improve your code. You watched the `dplyr` lecture, right? Did 
+you do that exercise? It's not obvious from the bizarre coding choices.... Jen! The point of taking the classes is to become less of a 
+hack programmer. As I mentioned in class, consider running your data frame through `janitor::clean_names()` to get names that work better in
+R (and, not coincidentally, conform to the style guide we're supposed to be using). Compare what you had to what I commited. (Which, btw, 
+I haven't tested, so there might be some typo-y errors.) 
+
+Are you familiar with the DRY programming principle? Code like this next section cries out for a function: 
+```
+sub8 = df.loc[1129:1504 , 450:899] #get dataframe subset #9/22 (dry) Pika L = 1129:1504 , 450:899, Pika 320 = 352:469 , 160:319
+        array8 = sub8.to_numpy() #make array from dataframe #9/23 (ice) Pika L = 1122:1495 , 450:899, 9/25 Pika L = 1089:1451 , 450:899
+        mean8 = array8.mean() #calculate mean
+        std8 = np.std(array8)
+        error8 = std8/np.sqrt(array8.size)
+```
+
+There are a lot of reasons to avoid code like this, but the biggest ones are to avoid bugs and make your code easier to maintain. 
+
+On the other hand, the analysis is awesome, so maybe I shouldn't care so much about how you get there. Really cool result, really 
+nice write-up. I have some TSWD-style comments on the graphs (chiefly using a color scheme for the points so that 1, 3, 5, and 7 
+are grouped together (all shades of, say, blue) while 2, 4, 6, and 8 are grouped (say, red)). I'm always looking for good collaborations
+that can lead to journal articles--if you ever need someone to do stats for you, call me!
+
+Consider this complete. Nice work. 
